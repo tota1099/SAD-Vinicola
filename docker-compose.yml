@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_DB=tadpgweb
+      - POSTGRES_USER=postgres
+      - TZ=GMT
+    volumes:
+      - "./data/postgres:/var/lib/postgresql/data"
+    ports:
+      - 5432:5432
+  pgadmin:
+    links:
+      - postgres
+    image: fenglc/pgadmin4
+    environment:
+      - DEFAULT_USER=admin
+      - DEFAULT_PASSWORD=admin
+    volumes:
+       - /data/pgadmin:/root/.pgadmin
+    ports:
+      - 5050:5050
+  pentaho-bi-server:
+    image: zhicwu/biserver-ce:7.1
+    ports:
+      - 8080:8080
+    command: biserver
+    volumes:
+      - ./ext:/bi-ext:ro
+      - ./data/.pentaho:/biserver-ce/.pentaho:rw
+      - ./data/hsqldb:/biserver-ce/data/hsqldb:rw
+      - ./data/logs:/biserver-ce/tomcat/logs:rw
+      - ./data/repository:/biserver-ce/pentaho-solutions/system/jackrabbit/repository:rw
+      - ./data/tmp:/biserver-ce/tmp:rw
+
+  spoon:
+    image: hiromuhota/webspoon:0.8.0.16 
+    ports:
+      - 8181:8080
+    volumes:
+      - ./spoon/:/root/.kettle/data/
+
+
+
