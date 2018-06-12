@@ -19,7 +19,7 @@ services:
       - DEFAULT_USER=admin
       - DEFAULT_PASSWORD=admin
     volumes:
-       - /data/pgadmin:/root/.pgadmin
+       - ./data/pgadmin:/root/.pgadmin
     ports:
       - 5050:5050
   pentaho-bi-server:
