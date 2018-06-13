@@ -20,6 +20,19 @@ services:
        - ./data/pgadmin:/root/.pgadmin
     ports:
       - 5050:5050
+  pentaho-bi-server:
+    image: zhicwu/biserver-ce:7.1
+    ports:
+      - 8080:8080
+    command: biserver
+    volumes:
+      - ./ext:/bi-ext:ro
+      - ./data/.pentaho:/biserver-ce/.pentaho:rw
+      - ./data/hsqldb:/biserver-ce/data/hsqldb:rw
+      - ./data/logs:/biserver-ce/tomcat/logs:rw
+      - ./data/repository:/biserver-ce/pentaho-solutions/system/jackrabbit/repository:rw
+      - ./data/tmp:/biserver-ce/tmp:rw
+      - ./biserver/:/biserver-ce/pentaho-solutions/system/saiku/biserverlicense/
   spoon:
     image: hiromuhota/webspoon:0.8.0.16 
     ports:
