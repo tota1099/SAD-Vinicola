@@ -492,6 +492,11 @@
       <to>Insert / Update</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>Table input</from>
+      <to>Insert / Update 2</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
     <name>Insert / Update</name>
@@ -511,7 +516,7 @@
       <schema>dwvinhos</schema>
       <table>di_loja</table>
       <key>
-        <name>nme_loja</name>
+        <name>tpo_estabelecimento</name>
         <field>nme_loja</field>
         <condition>=</condition>
         <name2/>
@@ -543,6 +548,59 @@
     <GUI>
       <xloc>288</xloc>
       <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Insert / Update 2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Sistemas de Apoio a Decisão</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>dwvinhos</schema>
+      <table>di_geo</table>
+      <key>
+        <name>nme_municipio</name>
+        <field>nme_municipio</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>nme_uf</name>
+        <field>nme_uf</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>nme_municipio</name>
+        <rename>nme_municipio</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>nme_uf</name>
+        <rename>nme_uf</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
