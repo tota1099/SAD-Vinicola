@@ -343,7 +343,7 @@
       <yloc>160</yloc>
     </entry>
     <entry>
-      <name>Gerar Dados Loja e Geo</name>
+      <name>Gerar Dados Loja</name>
       <description/>
       <type>TRANS</type>
       <specification_method>filename</specification_method>
@@ -375,7 +375,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>96</xloc>
+      <xloc>80</xloc>
       <yloc>256</yloc>
     </entry>
     <entry>
@@ -411,8 +411,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>96</xloc>
-      <yloc>352</yloc>
+      <xloc>240</xloc>
+      <yloc>336</yloc>
     </entry>
     <entry>
       <name>Gerar dados Vinho</name>
@@ -448,7 +448,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>256</xloc>
-      <yloc>352</yloc>
+      <yloc>240</yloc>
     </entry>
     <entry>
       <name>Gerar dados FATO</name>
@@ -484,7 +484,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>256</xloc>
-      <yloc>192</yloc>
+      <yloc>144</yloc>
     </entry>
     <entry>
       <name>Success</name>
@@ -495,6 +495,42 @@
       <nr>0</nr>
       <xloc>256</xloc>
       <yloc>48</yloc>
+    </entry>
+    <entry>
+      <name>Gerar Dados Geo</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>${Internal.Entry.Current.Directory}/Gerar Dados GEO.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <run_configuration/>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>80</xloc>
+      <yloc>336</yloc>
     </entry>
   </entries>
   <hops>
@@ -509,16 +545,7 @@
     </hop>
     <hop>
       <from>Apagar Dados</from>
-      <to>Gerar Dados Loja e Geo</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Gerar Dados Loja e Geo</from>
-      <to>Gerar dados Tempo</to>
+      <to>Gerar Dados Loja</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -551,6 +578,24 @@
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
       <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Gerar Dados Loja</from>
+      <to>Gerar Dados Geo</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Gerar Dados Geo</from>
+      <to>Gerar dados Tempo</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>
