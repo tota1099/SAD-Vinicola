@@ -1,0 +1,140 @@
+Vinho,Quant_Caixas,Preco_por_Caixa,Valor_Venda,Mes,Ano,Comprador,Tipo_de_Estabelecimento,Municipio,UF
+San Conrado,20,170,3400,01,2008,Hotel e Spa Bom Apetite,Hotel,Palhoça,Santa Catarina
+Carta Vieja,6,145,870,07,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Do Lugar,7,185,1295,01,2008,Bigfoot Breweries,Loja,Florianópolis,Santa Catarina
+Almadén,20,105,2100,01,2008,Hotel Cinco Estrelas,Hotel,Palhoça,Santa Catarina
+Trapiche,36,155,5580,07,2008,Restaurante El Borracho,Restaurante,Antônio Carlos,Santa Catarina
+Concha y Toro,21,180,3780,07,2008,Restaurante El Borracho,Restaurante,Antônio Carlos,Santa Catarina
+Concha y Toro,36,180,6480,07,2008,Restaurante El Borracho,Restaurante,Antônio Carlos,Santa Catarina
+Trapiche,15,155,2325,08,2008,Restaurante El Borracho,Restaurante,Antônio Carlos,Santa Catarina
+Trapiche,24,155,3720,08,2008,Restaurante El Borracho,Restaurante,Antônio Carlos,Santa Catarina
+Valmarino,20,95,1900,01,2008,Restaurante Escargots,Restaurante,Santo Amaro da Imperatriz,Santa Catarina
+Trapiche,24,155,3720,01,2008,Restaurante Escargots,Restaurante,Santo Amaro da Imperatriz,Santa Catarina
+Navarro Correa,5,90,450,11,2008,Restaurante Gaivota,Restaurante,São José,Santa Catarina
+Carta Vieja,6,145,870,12,2008,Restaurante Gaivota,Restaurante,São José,Santa Catarina
+Amadeu,30,150,4500,01,2008,Restaurante Italiano,Restaurante,Governador Celso Ramos,Santa Catarina
+Almadén,30,105,3150,03,2008,Hotel Cinco Estrelas,Hotel,Palhoça,Santa Catarina
+Valmarino,10,95,950,02,2008,Restaurante Italiano,Restaurante,Governador Celso Ramos,Santa Catarina
+Amadeu,11,150,1650,02,2008,Restaurante Italiano,Restaurante,Governador Celso Ramos,Santa Catarina
+Casa Valduga,20,140,2800,11,2008,Restaurante 'Las Cabras',Restaurante,São Pedro de Alcântara,Santa Catarina
+Casa Valduga,10,140,1400,12,2008,Restaurante 'Las Cabras',Restaurante,São Pedro de Alcântara,Santa Catarina
+Casa Valduga,31,140,4340,12,2008,Restaurante 'Las Cabras',Restaurante,São Pedro de Alcântara,Santa Catarina
+Santa Helena,12,270,3240,01,2008,Restaurante O Portugues,Restaurante,Florianópolis,Santa Catarina
+Santa Rosa,25,125,3125,02,2008,Restaurante O Portugues,Restaurante,Florianópolis,Santa Catarina
+Do Lugar,70,190,13300,09,2008,Somente Vinhos,Loja,São Pedro de Alcântara,Santa Catarina
+Navarro Correa,5,90,450,11,2008,Somente Vinhos,Loja,São Pedro de Alcântara,Santa Catarina
+Navarro Correa,10,90,900,12,2008,Somente Vinhos,Loja,São Pedro de Alcântara,Santa Catarina
+Terrazas,18,115,2070,05,2008,Hotel Cinco Estrelas,Hotel,Palhoça,Santa Catarina
+Navarro Correa,21,90,1890,03,2008,"Specialty Biscuits, Ltd.",Loja,São José,Santa Catarina
+Amadeu,31,150,4650,04,2008,"Specialty Biscuits, Ltd.",Loja,São José,Santa Catarina
+Don Laurindo,25,120,3000,09,2008,Supermercados  Barato,Loja,São Bonifácio,Santa Catarina
+Don Laurindo,6,120,720,09,2008,Supermercados  Barato,Loja,São Bonifácio,Santa Catarina
+Santa Rosa,12,125,1500,09,2008,Supermercados  Barato,Loja,São Bonifácio,Santa Catarina
+Santa Rosa,20,125,2500,09,2008,Supermercados  Barato,Loja,São Bonifácio,Santa Catarina
+Santa Rosa,24,125,3000,09,2008,Supermercados  Barato,Loja,São Bonifácio,Santa Catarina
+Do Lugar,25,190,4750,04,2008,Supermercados  Preço Baixo,Loja,Antônio Carlos,Santa Catarina
+Do Lugar,31,190,5890,04,2008,Supermercados  Preço Baixo,Loja,Antônio Carlos,Santa Catarina
+Almadén,70,105,7350,07,2008,Supermercados A Cidade,Loja,Palhoça,Santa Catarina
+Trapiche,15,105,1575,02,2008,Hotel Cinco Estrelas,Hotel,Palhoça,Santa Catarina
+Terrazas,5,115,575,11,2008,Supermercados A Cidade,Loja,Palhoça,Santa Catarina
+Santa Carolina,18,240,4320,01,2008,Supermercados O Melhor,Loja,São Bonifácio,Santa Catarina
+Santa Carolina,25,240,6000,02,2008,Supermercados O Melhor,Loja,São Bonifácio,Santa Catarina
+Santa Ana,45,160,7200,10,2008,Supermercados SC,Loja,Governador Celso Ramos,Santa Catarina
+Dal Pizzol,23,210,4830,12,2008,Supermercados SC,Loja,Governador Celso Ramos,Santa Catarina
+Dal Pizzol,5,210,1050,12,2008,Supermercados SC,Loja,Governador Celso Ramos,Santa Catarina
+Carta Vieja,10,145,1450,02,2008,Vinhos e Importados,Loja,São Bonifácio,Santa Catarina
+Trapiche,14,155,2170,03,2008,Vinhos e Importados,Loja,São Bonifácio,Santa Catarina
+Valmarino,45,145,6525,08,2008,Vinhos e Importados,Loja,São Bonifácio,Santa Catarina
+Carta Vieja,20,145,2900,09,2008,Vinhos e Importados,Loja,São Bonifácio,Santa Catarina
+Dal Pizzol,10,210,2100,12,2008,Hotel Cinco Estrelas,Hotel,Palhoça,Santa Catarina
+Dal Pizzol,25,210,5250,12,2008,Hotel Cinco Estrelas,Hotel,Palhoça,Santa Catarina
+Terrazas,30,115,3450,12,2008,Hotel Cinco Estrelas,Hotel,Palhoça,Santa Catarina
+San Conrado,25,170,4250,05,2008,Hotel e Spa Bom Apetite,Hotel,Palhoça,Santa Catarina
+San Conrado,30,170,5100,05,2008,Hotel e Spa Bom Apetite,Hotel,Palhoça,Santa Catarina
+Do Lugar,10,190,1900,02,2008,Bigfoot Breweries,Loja,Florianópolis,Santa Catarina
+San Conrado,30,170,5100,06,2008,Hotel e Spa Bom Apetite,Hotel,Palhoça,Santa Catarina
+San Conrado,15,170,2550,06,2008,Hotel e Spa Bom Apetite,Hotel,Palhoça,Santa Catarina
+San Conrado,15,170,2550,07,2008,Hotel e Spa Bom Apetite,Hotel,Palhoça,Santa Catarina
+Dal Pizzol,20,210,4200,02,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,30,170,5100,02,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,35,210,7350,02,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,15,170,2550,04,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Almadén,8,210,1680,05,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,15,170,2550,05,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,20,210,4200,05,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Do Lugar,25,195,4875,02,2008,Bigfoot Breweries,Loja,Florianópolis,Santa Catarina
+Dal Pizzol,35,210,7350,06,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,60,200,12000,06,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,42,170,7140,06,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,60,210,12600,06,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,50,210,10500,07,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,70,210,14700,07,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,31,170,5270,07,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,5,170,850,07,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,20,210,4200,07,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Do Lugar,20,190,3800,03,2008,Bigfoot Breweries,Loja,Florianópolis,Santa Catarina
+San Conrado,20,170,3400,07,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,30,170,5100,08,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,10,175,1750,08,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,15,210,3150,08,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,24,170,4080,08,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,40,210,8400,08,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,20,170,3400,09,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Almadén,40,145,5800,09,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,15,170,2550,12,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+San Conrado,25,170,4250,12,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Concha y Toro,30,200,6000,06,2008,Bigfoot Breweries,Loja,Florianópolis,Santa Catarina
+San Conrado,5,170,850,12,2008,Hotel La Plata,Hotel,Florianópolis,Santa Catarina
+Miolo,10,150,1500,02,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Miolo,30,110,3300,02,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Miolo,25,120,3000,03,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Miolo,14,110,1540,03,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Carta Vieja,25,145,3625,03,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Miolo,10,110,1100,04,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Carta Vieja,10,110,1100,05,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Miolo,15,110,1650,06,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Don Laurindo,18,120,2160,06,2008,Escargots Nouveaux,Restaurante,Palhoça,Santa Catarina
+Miolo,35,110,3850,06,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,40,210,8400,06,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Carta Vieja,37,145,5365,07,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Miolo,10,110,1100,07,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Miolo,14,110,1540,07,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,20,210,4200,07,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Carta Vieja,15,120,1800,08,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Carta Vieja,30,145,4350,09,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Dal Pizzol,25,210,5250,09,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Miolo,40,125,5000,09,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Don Laurindo,30,120,3600,05,2008,Escargots Nouveaux,Restaurante,Palhoça,Santa Catarina
+Carta Vieja,20,145,2900,01,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina
+Santa Ana,35,160,5600,07,2008,Importados SRL,Loja,Biguaçu,Santa Catarina
+Don Laurindo,40,120,4800,07,2008,Importados SRL,Loja,Biguaçu,Santa Catarina
+Don Laurindo,25,120,3000,07,2008,Importados SRL,Loja,Biguaçu,Santa Catarina
+Don Laurindo,15,120,1800,08,2008,Importados SRL,Loja,Biguaçu,Santa Catarina
+Casa de Bento,14,96,1344,01,2008,Loja de Importados e Nacionais,Loja,Governador Celso Ramos,Santa Catarina
+Dal Pizzol,6,210,1260,02,2008,Loja de Importados e Nacionais,Loja,Governador Celso Ramos,Santa Catarina
+Casa de Bento,12,96,1152,02,2008,Loja de Importados e Nacionais,Loja,Governador Celso Ramos,Santa Catarina
+Almadén,25,105,2625,08,2008,Lojas A Bodeguita,Loja,Florianópolis,Santa Catarina
+Santa Rosa,30,125,3750,08,2008,Lojas A Bodeguita,Loja,Florianópolis,Santa Catarina
+Don Laurindo,20,120,2400,11,2008,Escargots Nouveaux,Restaurante,Palhoça,Santa Catarina
+Santa Rosa,12,125,1500,09,2008,Lojas A Bodeguita,Loja,Florianópolis,Santa Catarina
+Santa Rosa,40,125,5000,09,2008,Lojas A Bodeguita,Loja,Florianópolis,Santa Catarina
+Casa de Bento,18,96,1728,01,2008,Ma Maison,Loja,Florianópolis,Santa Catarina
+Casa de Bento,25,96,2400,02,2008,Ma Maison,Loja,Florianópolis,Santa Catarina
+Valmarino,31,95,2945,03,2008,Ma Maison,Loja,Florianópolis,Santa Catarina
+Casa de Bento,31,96,2976,04,2008,Ma Maison,Loja,Florianópolis,Santa Catarina
+Almadén,50,105,5250,07,2008,Pasta Buttini s.r.l.,Restaurante,Florianópolis,Santa Catarina
+Almadén,20,105,2100,08,2008,Pasta Buttini s.r.l.,Restaurante,Florianópolis,Santa Catarina
+Don Laurindo,23,120,2760,09,2008,Pasta Buttini s.r.l.,Restaurante,Florianópolis,Santa Catarina
+Don Laurindo,20,120,2400,09,2008,Pasta Buttini s.r.l.,Restaurante,Florianópolis,Santa Catarina
+Concha y Toro,10,160,1600,01,2008,Hotel Cinco Estrelas,Hotel,Palhoça,Santa Catarina
+Concha y Toro,15,180,2700,03,2008,Queijos e Vinhos,Loja,Biguaçu,Santa Catarina
+Concha y Toro,30,180,5400,03,2008,Queijos e Vinhos,Loja,Biguaçu,Santa Catarina
+Casa de Bento,10,96,960,04,2008,Queijos e Vinhos,Loja,Biguaçu,Santa Catarina
+Miolo,45,110,4950,11,2008,Restaurante Beira Mar,Restaurante,Antônio Carlos,Santa Catarina
+Miolo,25,110,2750,12,2008,Restaurante Beira Mar,Restaurante,Antônio Carlos,Santa Catarina
+Casa Valduga,23,140,3220,12,2008,Restaurante Beira Mar,Restaurante,Antônio Carlos,Santa Catarina
+Santa Carolina,18,240,4320,01,2008,Restaurante Bom Apetite,Restaurante,Santo Amaro da Imperatriz,Santa Catarina
+Amadeu,20,150,3000,01,2008,Restaurante Bom Apetite,Restaurante,Santo Amaro da Imperatriz,Santa Catarina
+Amadeu,14,150,2100,02,2008,Restaurante Bom Apetite,Restaurante,Santo Amaro da Imperatriz,Santa Catarina
+Do Lugar,12,190,2280,03,2008,Restaurante Bom Apetite,Restaurante,Santo Amaro da Imperatriz,Santa Catarina
+Miolo,10,110,1100,02,2008,Hotel Verde Mar,Hotel,Florianópolis,Santa Catarina

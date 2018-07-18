@@ -1,0 +1,81 @@
+CREATE TABLE dwvinhos.DI_TEMPO (
+                seq_tempo INTEGER NOT NULL,
+                mes VARCHAR NOT NULL,
+                ano INTEGER NOT NULL,
+                CONSTRAINT di_tempo_pk PRIMARY KEY (seq_tempo)
+);
+
+
+CREATE SEQUENCE dwvinhos.di_vinhos_seq_vinho_seq;
+
+CREATE TABLE dwvinhos.DI_VINHOS (
+                seq_vinho INTEGER NOT NULL DEFAULT nextval('dwvinhos.di_vinhos_seq_vinho_seq'),
+                nome_vinho VARCHAR NOT NULL,
+                marca_vinho VARCHAR NOT NULL,
+                CONSTRAINT di_vinhos_pk PRIMARY KEY (seq_vinho)
+);
+
+
+ALTER SEQUENCE dwvinhos.di_vinhos_seq_vinho_seq OWNED BY dwvinhos.DI_VINHOS.seq_vinho;
+
+CREATE SEQUENCE dwvinhos.di_loja_seq_loja_seq;
+CREATE SEQUENCE dwvinhos.di_geo_seq_geo_seq;
+
+CREATE TABLE dwvinhos.DI_LOJA (
+                seq_loja INTEGER NOT NULL DEFAULT nextval('dwvinhos.di_loja_seq_loja_seq'),
+                nome_loja VARCHAR(150) NOT NULL,
+                tipo_estabelecimento VARCHAR NOT NULL,
+                CONSTRAINT di_loja_pk PRIMARY KEY (seq_loja)
+);
+
+CREATE TABLE dwvinhos.DI_GEO (
+                seq_geo INTEGER NOT NULL DEFAULT nextval('dwvinhos.di_geo_seq_geo_seq'),
+                municipio_nome VARCHAR NOT NULL,
+                UF VARCHAR(25) NOT NULL,
+                CONSTRAINT di_geo_pk PRIMARY KEY (seq_geo)
+);
+
+
+ALTER SEQUENCE dwvinhos.di_loja_seq_loja_seq OWNED BY dwvinhos.DI_LOJA.seq_loja;
+ALTER SEQUENCE dwvinhos.di_geo_seq_geo_seq OWNED BY dwvinhos.DI_GEO.seq_geo;
+
+CREATE TABLE dwvinhos.FT_VENDAS (
+                seq_loja INTEGER NOT NULL,
+                seq_geo INTEGER NOT NULL,
+                seq_vinho INTEGER NOT NULL,
+                seq_tempo INTEGER NOT NULL,
+                valor_venda VARCHAR(10) NOT NULL,
+                valor_caixa_venda VARCHAR(10) NOT NULL,
+                numero_caixas_vendidas INTEGER NOT NULL,
+                CONSTRAINT ft_vendas_pk PRIMARY KEY (seq_loja, seq_geo, seq_vinho, seq_tempo)
+);
+
+
+
+ALTER TABLE dwvinhos.FT_VENDAS ADD CONSTRAINT di_tempo_ft_vendas_fk
+FOREIGN KEY (seq_tempo)
+REFERENCES dwvinhos.DI_TEMPO (seq_tempo)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE dwvinhos.FT_VENDAS ADD CONSTRAINT di_vinhos_ft_vendas_fk
+FOREIGN KEY (seq_vinho)
+REFERENCES dwvinhos.DI_VINHOS (seq_vinho)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE dwvinhos.FT_VENDAS ADD CONSTRAINT di_loja_ft_vendas_fk
+FOREIGN KEY (seq_loja)
+REFERENCES dwvinhos.DI_LOJA (seq_loja)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
+
+ALTER TABLE dwvinhos.FT_VENDAS ADD CONSTRAINT di_geo_ft_vendas_fk
+FOREIGN KEY (seq_geo)
+REFERENCES dwvinhos.DI_geo (seq_geo)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;

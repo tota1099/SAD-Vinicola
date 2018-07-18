@@ -512,23 +512,23 @@
       <table>di_loja</table>
       <key>
         <name>nme_loja</name>
-        <field>nme_loja</field>
+        <field>nome_loja</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>tpo_estabelecimento</name>
-        <field>tpo_estabelecimento</field>
+        <field>tipo_estabelecimento</field>
         <condition>=</condition>
         <name2/>
       </key>
       <value>
-        <name>nme_loja</name>
+        <name>nome_loja</name>
         <rename>nme_loja</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>tpo_estabelecimento</name>
+        <name>tipo_estabelecimento</name>
         <rename>tpo_estabelecimento</rename>
         <update>Y</update>
       </value>
@@ -581,8 +581,8 @@ AND L.CODIGO_MUNICIPIO = M.CODIGO_MUNICIPIO</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>80</yloc>
+      <xloc>96</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
