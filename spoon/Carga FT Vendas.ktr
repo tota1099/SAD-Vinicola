@@ -6,6 +6,7 @@
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -486,40 +487,34 @@
       </attribute>
     </attributes>
   </connection>
+  <connection>
+    <name>Sistemas de Apoio a decisão2</name>
+    <server>postgres</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>curso</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <order>
-    <hop>
-      <from>Table input</from>
-      <to>Database lookup DI Vinhos</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup DI Vinhos</from>
-      <to>Database lookup DI Lojas</to>
-      <enabled>Y</enabled>
-    </hop>
     <hop>
       <from>Database lookup DI Lojas</from>
       <to>Database lookup DI GEO</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup DI GEO</from>
-      <to>Database lookup DI Tempo</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort rows</from>
       <to>Group by</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Group by</from>
-      <to>Insert / Update</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup DI Tempo</from>
-      <to>Calculator</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -530,6 +525,31 @@
     <hop>
       <from>Select values</from>
       <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup TEMPO</from>
+      <to>Database lookup DI Lojas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup DI GEO</from>
+      <to>Database lookup DI Vinhos</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Database lookup DI Vinhos</from>
+      <to>Calculator</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Group by</from>
+      <to>Insert / Update</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Table input</from>
+      <to>Database lookup TEMPO</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -552,7 +572,7 @@
       <field_c/>
       <value_type>None</value_type>
       <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
+      <value_precision>10</value_precision>
       <remove>N</remove>
       <conversion_mask/>
       <decimal_symbol/>
@@ -567,8 +587,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>336</xloc>
-      <yloc>208</yloc>
+      <xloc>368</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -595,13 +615,13 @@
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
         <name>nme_municipio</name>
-        <field>nme_municipio</field>
+        <field>municipio_nome</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>nme_uf</name>
-        <field>nme_uf</field>
+        <field>uf</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -620,8 +640,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>384</yloc>
+      <xloc>128</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -648,13 +668,13 @@
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
         <name>nme_loja</name>
-        <field>nme_loja</field>
+        <field>nome_loja</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>tpo_estabelecimento</name>
-        <field>tpo_estabelecimento</field>
+        <field>tipo_estabelecimento</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -673,61 +693,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
+      <xloc>128</xloc>
       <yloc>272</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Database lookup DI Tempo</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>Sistemas de Apoio a Decisão</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>dwvinhos</schema>
-      <table>di_tempo</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>mes</name>
-        <field>mes</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>ano</name>
-        <field>ano</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>seq_tempo</name>
-        <rename>seq_tempo</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>336</xloc>
-      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -754,13 +721,66 @@
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
         <name>nme_vinho</name>
-        <field>nme_vinho</field>
+        <field>nome_vinho</field>
         <condition>=</condition>
         <name2/>
       </key>
       <value>
-        <name>seq_vinhos</name>
-        <rename>seq_vinhos</rename>
+        <name>seq_vinho</name>
+        <rename>seq_vinho</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>384</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Database lookup TEMPO</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>Sistemas de Apoio a decisão2</connection>
+    <cache>N</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>dwvinhos</schema>
+      <table>di_tempo</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ano</name>
+        <field>ano</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>mes</name>
+        <field>mes</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>seq_tempo</name>
+        <rename>seq_tempo</rename>
         <default/>
         <type>Integer</type>
       </value>
@@ -774,7 +794,7 @@
     </remotesteps>
     <GUI>
       <xloc>112</xloc>
-      <yloc>160</yloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -799,7 +819,7 @@
     <give_back_row>N</give_back_row>
     <group>
       <field>
-        <name>seq_vinhos</name>
+        <name>seq_vinho</name>
       </field>
       <field>
         <name>seq_geo</name>
@@ -839,8 +859,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>160</yloc>
+      <xloc>560</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -862,8 +882,8 @@
       <schema>dwvinhos</schema>
       <table>ft_vendas</table>
       <key>
-        <name>seq_vinhos</name>
-        <field>seq_vinhos</field>
+        <name>seq_vinho</name>
+        <field>seq_vinho</field>
         <condition>=</condition>
         <name2/>
       </key>
@@ -886,8 +906,8 @@
         <name2/>
       </key>
       <value>
-        <name>seq_vinhos</name>
-        <rename>seq_vinhos</rename>
+        <name>seq_vinho</name>
+        <rename>seq_vinho</rename>
         <update>Y</update>
       </value>
       <value>
@@ -906,12 +926,12 @@
         <update>Y</update>
       </value>
       <value>
-        <name>nro_caixas_vendidas</name>
-        <rename>valor_venda</rename>
+        <name>numero_caixas_vendidas</name>
+        <rename>nro_caixas_vendidas</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>valor_caixa</name>
+        <name>valor_caixa_venda</name>
         <rename>valor_caixa</rename>
         <update>Y</update>
       </value>
@@ -929,8 +949,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>336</yloc>
+      <xloc>576</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -948,47 +968,78 @@
     <fields>
       <field>
         <name>nro_caixas_vendidas</name>
+        <rename/>
       </field>
       <field>
         <name>valor_caixa</name>
+        <rename/>
       </field>
       <field>
         <name>ano</name>
+        <rename/>
       </field>
       <field>
         <name>mes</name>
+        <rename/>
       </field>
       <field>
         <name>nme_vinho</name>
+        <rename/>
       </field>
       <field>
         <name>nme_loja</name>
+        <rename/>
       </field>
       <field>
         <name>tpo_estabelecimento</name>
+        <rename/>
       </field>
       <field>
         <name>nme_municipio</name>
+        <rename/>
       </field>
       <field>
         <name>nme_uf</name>
+        <rename/>
       </field>
       <field>
-        <name>seq_vinhos</name>
+        <name>seq_vinho</name>
+        <rename/>
       </field>
       <field>
         <name>seq_loja</name>
+        <rename/>
       </field>
       <field>
         <name>seq_geo</name>
+        <rename/>
       </field>
       <field>
         <name>seq_tempo</name>
+        <rename/>
       </field>
       <field>
         <name>valor_venda</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>valor_caixa</name>
+        <rename>valor_caixa</rename>
+        <type>Number</type>
+        <length>10</length>
+        <precision>10</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <cluster_schema/>
     <remotesteps>
@@ -998,8 +1049,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>336</xloc>
-      <yloc>32</yloc>
+      <xloc>352</xloc>
+      <yloc>16</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1023,7 +1074,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>seq_vinhos</name>
+        <name>seq_vinho</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1063,8 +1114,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>32</yloc>
+      <xloc>544</xloc>
+      <yloc>16</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1082,8 +1133,8 @@
     <connection>Sistemas de Apoio a Decisão</connection>
     <sql>SELECT
 R.NRO_CAIXAS_VENDIDAS, R.VALOR_CAIXA,
-EXTRACT(YEAR FROM R.DTA_VENDA) AS ANO,
-EXTRACT(MONTH FROM R.DTA_VENDA) AS MES,
+CAST(EXTRACT(YEAR FROM R.DTA_VENDA) AS INTEGER) AS ANO,
+CAST(EXTRACT(MONTH FROM R.DTA_VENDA) AS VARCHAR) AS MES,
 V.NME_VINHO,
 L.NME_LOJA, E.TPO_ESTABELECIMENTO,
 M.NME_MUNICIPIO, U.NME_UF
@@ -1099,7 +1150,9 @@ R.CODIGO_VINHO = V.CODIGO_VINHO AND
 R.CODIGO_LOJA = L.CODIGO_LOJA AND
 L.CODIGO_ESTABELECIMENTO = E.CODIGO_ESTABELECIMENTO AND
 L.CODIGO_MUNICIPIO = M.CODIGO_MUNICIPIO AND
-M.CODIGO_UF = U.CODIGO_UF</sql>
+M.CODIGO_UF = U.CODIGO_UF
+
+</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1114,7 +1167,7 @@ M.CODIGO_UF = U.CODIGO_UF</sql>
     </remotesteps>
     <GUI>
       <xloc>112</xloc>
-      <yloc>48</yloc>
+      <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

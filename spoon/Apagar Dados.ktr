@@ -504,11 +504,11 @@
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DELETE FROM DWVINHOS.DI_TEMPO;
-DELETE FROM DWVINHOS.DI_GEO;
-DELETE FROM DWVINHOS.DI_VINHOS;
-DELETE FROM DWVINHOS.DI_LOJA;
-DELETE FROM DWVINHOS.FT_VENDAS;</sql>
+    <sql>TRUNCATE DWVINHOS.DI_TEMPO CASCADE;
+TRUNCATE DWVINHOS.DI_GEO CASCADE;
+TRUNCATE DWVINHOS.DI_VINHOS CASCADE;
+TRUNCATE DWVINHOS.DI_LOJA CASCADE;
+TRUNCATE DWVINHOS.FT_VENDAS CASCADE;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>

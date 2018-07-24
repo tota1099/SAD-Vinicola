@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>Avaliacao3</name>
+    <name>Avaliacao3 Geo</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -661,23 +662,23 @@
       <table>di_geo</table>
       <key>
         <name>Municipio</name>
-        <field>nme_municipio</field>
+        <field>municipio_nome</field>
         <condition>=</condition>
         <name2/>
       </key>
       <key>
         <name>UF</name>
-        <field>nme_uf</field>
+        <field>uf</field>
         <condition>=</condition>
         <name2/>
       </key>
       <value>
-        <name>nme_municipio</name>
+        <name>municipio_nome</name>
         <rename>Municipio</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>nme_uf</name>
+        <name>uf</name>
         <rename>UF</rename>
         <update>Y</update>
       </value>

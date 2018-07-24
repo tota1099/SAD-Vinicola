@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>Avaliacao3</name>
+    <name>Avaliacao 3 Tempo</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -489,21 +490,6 @@
   <order>
     <hop>
       <from>CSV file input</from>
-      <to>Insert / Update GEO</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>CSV file input</from>
-      <to>Insert / Update Loja</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>CSV file input</from>
-      <to>Insert / Update Vinho</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>CSV file input</from>
       <to>Modified Java Script Value</to>
       <enabled>Y</enabled>
     </hop>
@@ -663,112 +649,6 @@
     </GUI>
   </step>
   <step>
-    <name>Insert / Update GEO</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>postgres c</connection>
-    <commit>100</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>dwvinhos</schema>
-      <table>di_geo</table>
-      <key>
-        <name>Municipio</name>
-        <field>nme_municipio</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>UF</name>
-        <field>nme_uf</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>nme_municipio</name>
-        <rename>Municipio</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>nme_uf</name>
-        <rename>UF</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Insert / Update Loja</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>postgres c</connection>
-    <commit>100</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>dwvinhos</schema>
-      <table>di_loja</table>
-      <key>
-        <name>Comprador</name>
-        <field>nme_loja</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>Tipo_de_Estabelecimento</name>
-        <field>tpo_estabelecimento</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>nme_loja</name>
-        <rename>Comprador</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>tpo_estabelecimento</name>
-        <rename>Tipo_de_Estabelecimento</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Insert / Update Tempo</name>
     <type>InsertUpdate</type>
     <description/>
@@ -828,48 +708,6 @@
     <GUI>
       <xloc>608</xloc>
       <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Insert / Update Vinho</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>postgres c</connection>
-    <commit>100</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>dwvinhos</schema>
-      <table>di_vinhos</table>
-      <key>
-        <name>Vinho</name>
-        <field>nme_vinho</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>nme_vinho</name>
-        <rename>Vinho</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

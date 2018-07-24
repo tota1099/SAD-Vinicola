@@ -1,12 +1,16 @@
+CREATE SEQUENCE dwvinhos.di_tempo_seq_tempo_seq;
+
+CREATE SEQUENCE dwvinhos.di_vinhos_seq_vinho_seq;
+
 CREATE TABLE dwvinhos.DI_TEMPO (
-                seq_tempo INTEGER NOT NULL,
-                mes VARCHAR NOT NULL,
+                seq_tempo INTEGER NOT NULL DEFAULT nextval('dwvinhos.di_tempo_seq_tempo_seq'),
+                mes INTEGER NOT NULL,
                 ano INTEGER NOT NULL,
+                semestre INTEGER NOT NULL,
+                trimestre INTEGER NOT NULL,
                 CONSTRAINT di_tempo_pk PRIMARY KEY (seq_tempo)
 );
 
-
-CREATE SEQUENCE dwvinhos.di_vinhos_seq_vinho_seq;
 
 CREATE TABLE dwvinhos.DI_VINHOS (
                 seq_vinho INTEGER NOT NULL DEFAULT nextval('dwvinhos.di_vinhos_seq_vinho_seq'),
@@ -16,6 +20,7 @@ CREATE TABLE dwvinhos.DI_VINHOS (
 );
 
 
+ALTER SEQUENCE dwvinhos.di_tempo_seq_tempo_seq OWNED BY dwvinhos.DI_TEMPO.seq_tempo;
 ALTER SEQUENCE dwvinhos.di_vinhos_seq_vinho_seq OWNED BY dwvinhos.DI_VINHOS.seq_vinho;
 
 CREATE SEQUENCE dwvinhos.di_loja_seq_loja_seq;
@@ -44,8 +49,8 @@ CREATE TABLE dwvinhos.FT_VENDAS (
                 seq_geo INTEGER NOT NULL,
                 seq_vinho INTEGER NOT NULL,
                 seq_tempo INTEGER NOT NULL,
-                valor_venda VARCHAR(10) NOT NULL,
-                valor_caixa_venda VARCHAR(10) NOT NULL,
+                valor_venda double precision NOT NULL,
+                valor_caixa_venda double precision NOT NULL,
                 numero_caixas_vendidas INTEGER NOT NULL,
                 CONSTRAINT ft_vendas_pk PRIMARY KEY (seq_loja, seq_geo, seq_vinho, seq_tempo)
 );

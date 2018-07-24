@@ -513,13 +513,18 @@
       <table>di_vinhos</table>
       <key>
         <name>nme_vinho</name>
-        <field>nme_vinho</field>
+        <field>nome_vinho</field>
         <condition>=</condition>
         <name2/>
       </key>
       <value>
-        <name>nme_vinho</name>
+        <name>nome_vinho</name>
         <rename>nme_vinho</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>marca_vinho</name>
+        <rename>codigo_vinho</rename>
         <update>Y</update>
       </value>
     </lookup>
